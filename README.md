@@ -39,6 +39,13 @@ The code has two "weak" dependencies. First, the initial example uses my
 [Spectral Visual Saliency Toolbox](http://www.mathworks.com/matlabcentral/fileexchange/32455-spectral-phase-based-visual-saliency "Spectral Visual Saliency Toolbox ")
 and, second, you can use [Steve Hoelzer's progress bar](http://www.mathworks.com/matlabcentral/fileexchange/6922-progressbar "Steve Hoelzer's progress bar") to visualize the evaluation progress.
 
+If you want to evaluate quaternion-based saliency detection algorithms, then you have to include the [QTFM](http://qtfm.sourceforge.net/) library as well. However, the [Spectral Visual Saliency Toolbox](http://www.mathworks.com/matlabcentral/fileexchange/32455-spectral-phase-based-visual-saliency "Spectral Visual Saliency Toolbox ") should be able to automatically download and install a patched QTFM version for use with QDCT, PQFT, EigenPQFT, etc.
+
+There are two simple ways to handle the dependencies:
+
+1. Simply add the library locations (i.e. where you downloaded/unpacked/installed them) to Matlab's search path(es) before you execute the script, see [Matlab *addpath*](http://www.mathworks.de/de/help/matlab/ref/addpath.html).
+2. By default the script expects to find the [Spectral Visual Saliency Toolbox](http://www.mathworks.com/matlabcentral/fileexchange/32455-spectral-phase-based-visual-saliency "Spectral Visual Saliency Toolbox ") under "../saliency" and the libraries under "../libs". However, you can of course change these default pathes to suit your setup.
+
 ## 3. INTERESTED IN SALIENT OBJECT DETECTION?
 
 Then you should also check out these two code fragments that are part of [1]
