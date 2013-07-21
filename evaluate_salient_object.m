@@ -43,6 +43,7 @@
 % are those of the authors and should not be interpreted as representing 
 % official policies, either expressed or implied, of B. Schauerte.
 
+addpath(genpath('libs'));
 if isempty(which('spectral_saliency_multichannel')), addpath(genpath('../saliency')); end
 if isempty(which('progressbar')), addpath(genpath('../libs/progressbar/')); end
 if isempty(which('qtfm_root')), addpath(genpath('../libs/qtfm')); end

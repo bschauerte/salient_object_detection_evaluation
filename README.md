@@ -41,10 +41,11 @@ and, second, you can use [Steve Hoelzer's progress bar](http://www.mathworks.com
 
 If you want to evaluate quaternion-based saliency detection algorithms, then you have to include the [QTFM](http://qtfm.sourceforge.net/) library as well. However, the [Spectral Visual Saliency Toolbox](http://www.mathworks.com/matlabcentral/fileexchange/32455-spectral-phase-based-visual-saliency "Spectral Visual Saliency Toolbox ") should be able to automatically download and install a patched QTFM version for use with QDCT, PQFT, EigenPQFT, etc.
 
-There are two simple ways to handle the dependencies:
+There are three simple ways to handle the dependencies:
 
-1. Simply add the library locations (i.e. where you downloaded/unpacked/installed them) to Matlab's search path(es) before you execute the script, see [Matlab *addpath*](http://www.mathworks.de/de/help/matlab/ref/addpath.html).
-2. By default the script expects to find the [Spectral Visual Saliency Toolbox](http://www.mathworks.com/matlabcentral/fileexchange/32455-spectral-phase-based-visual-saliency "Spectral Visual Saliency Toolbox ") under "../saliency" and the libraries under "../libs". However, you can of course change these default pathes to suit your setup.
+1. Simply run the *install_dependencies* script, which tries to install the [Spectral Visual Saliency Toolbox](http://www.mathworks.com/matlabcentral/fileexchange/32455-spectral-phase-based-visual-saliency "Spectral Visual Saliency Toolbox ") and the [progressbar](http://www.mathworks.com/matlabcentral/fileexchange/6922-progressbar "Steve Hoelzer's progress bar") package to "libs". The "libs" subfolder will be created, if it does not exist. *NOTE:* The *unzip* command can be problematic under Mac OS X, in which you should best extract troublesome zip package(s) using another archive utility.
+2. Simply add the library locations (i.e. where you downloaded/unpacked/installed them) to Matlab's search path(es) before you execute the script, see [Matlab *addpath*](http://www.mathworks.de/de/help/matlab/ref/addpath.html).
+3. By default the script expects to find the [Spectral Visual Saliency Toolbox](http://www.mathworks.com/matlabcentral/fileexchange/32455-spectral-phase-based-visual-saliency "Spectral Visual Saliency Toolbox ") under "../saliency" and the libraries under "../libs". However, you can of course change these default pathes to suit your setup.
 
 ## 3. INTERESTED IN SALIENT OBJECT DETECTION?
 
