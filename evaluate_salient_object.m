@@ -47,9 +47,12 @@ if isempty(which('spectral_saliency_multichannel')), addpath(genpath('../salienc
 if isempty(which('progressbar')), addpath(genpath('../libs/progressbar/')); end
 if isempty(which('qtfm_root')), addpath(genpath('../libs/qtfm')); end
 
-% compile the provided .cpp file, if necessary
+% compile the provided .cpp file(s), if necessary
 if ~exist('analyse_recall_precision_mex') %#ok<EXIST>
     mex analyse_recall_precision_mex.cpp -D__MEX 
+end
+if ~exist('calculate_classification_scores_mex') %#ok<EXIST>
+    mex calculate_classification_scores_mex.cpp -D__MEX 
 end
 
 if ~exist('pr_div_by_zero_result','var')
